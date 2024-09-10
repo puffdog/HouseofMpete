@@ -99,6 +99,21 @@ body {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+.cta-button {
+    display: inline-block;
+    padding: 15px 25px;
+    color: white;
+    background-color: #0077b6;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem; /* Adjust font size if needed */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005f8a;
+}
 
 /* Product Grid Section */
 .products {
