@@ -227,3 +227,80 @@ body {
 
 .footer .social-media img {
     width:
+
+        /* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .video-description h2 {
+        font-size: 1.5rem;
+    }
+
+    .video-description p {
+        font-size: 1rem;
+    }
+
+    .product-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-item p {
+        font-size: 0.9rem;
+    }
+
+    .product-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .video-description h2 {
+        font-size: 1.2rem;
+    }
+
+    .video-description p {
+        font-size: 0.9rem;
+    }
+
+    .product-item {
+        padding: 10px;
+    }
+
+    .product-item h3 {
+        font-size: 1rem;
+    }
+
+    .product-item p {
+        font-size: 0.8rem;
+    }
+
+    .product-link {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
