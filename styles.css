@@ -60,39 +60,44 @@ body {
     align-items: center;
 }
 
-.video-section .cta-button {
-    background-color: #388e3c; /* Green color for button */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px; /* Rounded button */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.125rem; /* Slightly larger text */
-    transition: background-color 0.3s ease, transform 0.3s ease;
+/* Video Section */
+.video-section {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #fff;
 }
 
 .video-container {
-    flex: 1;
-    padding-right: 20px;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
 .video-description {
-    flex: 1;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 .video-description h2 {
     font-size: 2rem;
-    color: #333;
+    margin-bottom: 10px;
 }
 
 .video-description p {
-    margin: 20px 0;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 /* Product Grid Section */
