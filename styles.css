@@ -142,6 +142,7 @@ text-align: center;
 .product-item img {
     width: 100%;
     border-radius: 10px;
+    max-width: 500px; /* Adjust this value to your desired size */
 }
 
 .product-item h3 {
