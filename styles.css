@@ -28,7 +28,7 @@ header {
 }
 
 header .hero-section {
-    background: url('Logo.jpg');
+    background-image: url('Logo.jpg') no repeat center center;
     background-size: cover;
     height: 400px;
     display: flex;
