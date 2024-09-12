@@ -289,14 +289,9 @@ body {
 
     .video-description p {
         font-size: 0.9rem;
-    }
-
-    .product-item {
-        padding: 10px;
-        width: 100%; /* Full width on mobile */
-        max-width: 100%; /* Make sure it doesn't shrink */
+    
 }
-    }
+    
 
     .product-item h3 {
         font-size: 1rem;
