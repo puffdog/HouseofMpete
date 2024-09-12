@@ -109,39 +109,40 @@ body {
     background-color: #005f8a;
 }
 
-/* Product Grid Section */
-.products {
-    text-align: center;
-    padding: 50px;
-    background-color: #e8f5e9;
-}
-
-.product-grid {
+/* Product Grid Sectio
+/* Container for product cards */
+.product-card-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
 }
 
+/* Individual product card styling */
 .product-card {
-    background-color: #ffffff;
+    background-color: var(--card-background);
     border-radius: 20px;
     overflow: hidden;
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
-    width: calc(25% - 40px); /* Adjust for spacing */
+    margin: 10px;
+    width: calc(25% - 20px); /* Adjust for spacing */
+    box-sizing: border-box;
 }
 
+/* Hover effect for the product card */
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Product image container */
 .product-card__image {
     height: 250px;
     overflow: hidden;
 }
 
+/* Image styling */
 .product-card__image img {
     width: 100%;
     height: 100%;
@@ -149,41 +150,48 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Hover effect for the image */
 .product-card:hover .product-card__image img {
     transform: scale(1.05);
 }
 
+/* Information section of the card */
 .product-card__info {
     padding: 20px;
 }
 
+/* Title of the product */
 .product-card__title {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--text-color);
 }
 
+/* Description of the product */
 .product-card__description {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 20px;
 }
 
+/* Price row styling */
 .product-card__price-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Product price styling */
 .product-card__price {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #388e3c;
+    color: var(--primary-color);
 }
 
+/* Button styling */
 .product-card__btn {
-    background-color: #388e3c;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -194,19 +202,21 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Hover effect for the button */
 .product-card__btn:hover {
     background-color: #C71729;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     .product-card {
-        width: calc(50% - 40px); /* Adjust for spacing */
+        width: calc(50% - 20px); /* Adjust for spacing */
     }
 }
 
 @media (max-width: 480px) {
     .product-card {
-        width: calc(100% - 40px); /* Adjust for spacing */
+        width: calc(100% - 20px); /* Adjust for spacing */
     }
 
     .product-card__image {
@@ -229,13 +239,6 @@ body {
         padding: 8px 16px;
         font-size: 0.8rem;
     }
-}
-
-/* Takealot Approval Section */
-.takealot-approval {
-    padding: 20px;
-    text-align: center;
-    background-color: #ffffff;
 }
 
 .takealot-approval h2 {
