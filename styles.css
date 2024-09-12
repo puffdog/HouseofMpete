@@ -128,23 +128,35 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+/* Default styling for larger screens (e.g. tablets, desktops) */
 .product-item {
     background-color: #90EE90;
     padding: 20px;
-    margin: 15px;
+    margin: 15px auto;  /* Center the container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Take full width of the container on mobile */
-    max-width: 500px; /* Limit the maximum width on larger screens */
+    width: 100%; /* Ensure full width on larger screens */
+    max-width: 500px; /* Maximum width for large screens */
     text-align: center;
 }
 
 /* Image Styling */
 .product-item img {
-    width: 100%; /* Ensure the image fills its container */
+    width: 100%; /* Make the image fill the container */
     border-radius: 10px;
     height: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile devices (600px and smaller) */
+@media (max-width: 600px) {
+    .product-item {
+        width: 90%; /* Reduce the container width for mobile */
+        margin: 15px auto; /* Keep it centered on mobile */
+    }
+
+    .product-item img {
+        width: 100%; /* Keep the image width responsive */
+    }
 }
 
 .product-item h3 {
