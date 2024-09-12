@@ -111,7 +111,7 @@ main {
 }
 
 .products h2 {
-    font-size: 4rem;
+    font-size: 2rem;
     color: var(--heading-color);
     margin-bottom: 20px;
 }
