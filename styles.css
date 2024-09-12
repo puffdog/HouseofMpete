@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +14,10 @@ body {
 
 /* Header Section */
 .hero-section {
-    background-image: url('Logo.jpg'); /* Replace with your Google Drive image link */
+    background-image: url('Logo.jpg');
     background-size: cover;
     background-position: center;
-    height: 50vh; /* Shortened height */
+    height: 50vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -26,13 +27,13 @@ body {
 }
 
 .hero-section .cta-button {
-    background-color: #388e3c; /* Green color for button */
+    background-color: #388e3c;
     color: white;
     padding: 15px 30px;
-    border-radius: 30px; /* Rounded button */
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.125rem; /* Slightly larger text */
+    font-size: 1.125rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -54,14 +55,6 @@ body {
 
 /* Video Section */
 .video-section {
-    display: flex;
-    padding: 50px;
-    background-color: #fff;
-    align-items: center;
-}
-
-/* Video Section */
-.video-section {
     padding: 20px 0;
     text-align: center;
     background-color: #fff;
@@ -69,7 +62,7 @@ body {
 
 .video-container {
     position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -99,6 +92,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
+
 .cta-button {
     display: inline-block;
     padding: 15px 25px;
@@ -107,7 +101,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1rem; /* Adjust font size if needed */
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -115,12 +109,11 @@ body {
     background-color: #005f8a;
 }
 
-
 /* Product Grid Section */
 .products {
     text-align: center;
     padding: 50px;
-    background-color: #e8f5e9; /* Light green background */
+    background-color: #e8f5e9;
 }
 
 .product-grid {
@@ -128,225 +121,184 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-/* Default styling for larger screens (e.g. tablets, desktops) */
-.product-item {
-    background-color: #90EE90;
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    width: calc(25% - 40px); /* Adjust for spacing */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-card__image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card__image img {
+    transform: scale(1.05);
+}
+
+.product-card__info {
     padding: 20px;
-    margin: 15px auto;  /* Center the container */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure full width on larger screens */
-    max-width: 500px; /* Maximum width for large screens */
-    text-align: center;
 }
 
-/* Image Styling */
-.product-item img {
-    /* Make the image fill the container */
-    border-radius: 10px;
-    height: auto; /* Maintain aspect ratio */
-    width: 180px;
-    height: auto;
-    padding: 3rem 0;
-    transition: .5s;
+.product-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-/* Mobile devices (600px and smaller) */
-@media (max-width: 600px) {
-    .product-item {
-        width: 90%; /* Reduce the container width for mobile */
-        margin: 15px auto; /* Keep it centered on mobile */
+.product-card__description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-card__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #388e3c;
+}
+
+.product-card__btn {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card__btn:hover {
+    background-color: #C71729;
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 40px); /* Adjust for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 40px); /* Adjust for spacing */
     }
 
-    .product-item img {
-        width: 100%; /* Keep the image width responsive */
+    .product-card__image {
+        height: 200px;
     }
-}
 
-.product-item h3 {
-    margin: 10px 0;
-}
+    .product-card__title {
+        font-size: 1.3rem;
+    }
 
-.product-link {
-    color: #388e3c; /* Green color for links */
-    font-weight: bold;
-    text-decoration: none;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
+    .product-card__description {
+        font-size: 0.8rem;
+    }
 
-.price {
-  color: grey;
-  font-size: 22px;
-}
+    .product-card__price {
+        font-size: 1.1rem;
+    }
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
+    .product-card__btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
 }
 
 /* Takealot Approval Section */
 .takealot-approval {
-    padding: 50px;
-    background-color: #333;
-    color: white;
+    padding: 20px;
     text-align: center;
+    background-color: #ffffff;
 }
 
 .takealot-approval h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.takealot-approval p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.takealot-approval a {
-    background-color: #388e3c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.takealot-approval a:hover {
-    background-color: #2c6e49;
-}
-
-/* Proudly SA Section */
+/* Proudly South African Section */
 .proudly-sa {
-    padding: 50px;
-    background-color: #fff;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #e8f5e9;
 }
 
 .proudly-sa img {
     width: 100px;
+    margin-bottom: 10px;
 }
 
 .proudly-sa h2 {
-    margin: 20px 0;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.proudly-sa p {
+    font-size: 1.2rem;
 }
 
 /* Final CTA Section */
 .final-cta {
     text-align: center;
-    padding: 50px;
-    background-color: #388e3c; /* Green color */
-    color: white;
+    padding: 30px;
+    background-color: #ffffff;
 }
 
-.final-cta a {
-    background-color: white;
-    color: #388e3c;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.final-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.final-cta a:hover {
-    background-color: #2c6e49;
-    color: white;
+.final-cta .cta-button {
+    font-size: 1.125rem;
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
-    background-color: #333;
+    background-color: #388e3c;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.footer .social-media img {
-    width:
-
-        /* Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .video-description h2 {
-        font-size: 1.5rem;
-    }
-
-    .video-description p {
-        font-size: 1rem;
-    }
-
-    .product-item h3 {
-        font-size: 1.2rem;
-    }
-
-    .product-item p {
-        font-size: 0.9rem;
-    }
-
-    .product-link {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    header p {
-        font-size: 0.9rem;
-    }
-
-    .cta-button {
-        padding: 8px 15px;
-        font-size: 0.8rem;
-    }
-
-    .video-description h2 {
-        font-size: 1.2rem;
-    }
-
-    .video-description p {
-        font-size: 0.9rem;
-    
-}
-    
-
-    .product-item h3 {
-        font-size: 1rem;
-    }
-
-    .product-item p {
-        font-size: 0.8rem;
-    }
-
-    .product-link {
-        padding: 6px 10px;
-        font-size: 0.8rem;
-    }
-}
+.footer p {
+    font-size: 0.9rem;
+} 
