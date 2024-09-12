@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #C71729;
+    --primary-color: #008000;
     --card-background: #ffffff;
     --text-color: #333333;
     --background-color: #f4f4f4;
@@ -28,7 +28,7 @@ header {
 }
 
 header .hero-section {
-    background: url('hero-background.jpg') no-repeat center center;
+    background: url('Logo.jpg') no-repeat center center;
     background-size: cover;
     height: 400px;
     display: flex;
