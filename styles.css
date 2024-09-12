@@ -144,7 +144,7 @@ max-width: 100%; /* Make sure it doesn't shrink */
 .product-item img {
     width: 100%;
     border-radius: 10px;
-    max-width: 800px; /* Adjust this value to your desired size */
+    max-width: 500px; /* Adjust this value to your desired size */
     height: Auto;
 }
 
