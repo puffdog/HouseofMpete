@@ -28,7 +28,7 @@ header {
 }
 
 header .hero-section {
-    background: url('Logo.jpg') no-repeat center center;
+    background: url('Logo.jpg');
     background-size: cover;
     height: 400px;
     display: flex;
@@ -111,7 +111,7 @@ main {
 }
 
 .products h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--heading-color);
     margin-bottom: 20px;
 }
@@ -171,7 +171,7 @@ main {
 }
 
 .product-card__description {
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     color: #666;
     margin-bottom: 16px;
     flex-grow: 1;
