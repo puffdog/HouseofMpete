@@ -1,148 +1,149 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* Global Styles */
+:root {
+    --primary-color: #C71729;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --background-color: #f4f4f4;
+    --heading-color: #222222;
 }
 
 body {
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* Header Section */
-.hero-section {
-    background-image: url('Logo.jpg');
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    position: relative;
+    color: white;
+}
+
+header .hero-section {
+    background: url('hero-background.jpg') no-repeat center center;
     background-size: cover;
-    background-position: center;
-    height: 50vh;
-    position: relative;
+    height: 400px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: white;
+    justify-content: center;
     text-align: center;
 }
 
-.hero-section .cta-button {
-    background-color: #388e3c;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.125rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hero-section .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+header .hero-section .overlay {
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
 
-.hero-section h1 {
+header .hero-section h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-.hero-section p {
+header .hero-section p {
     font-size: 1.25rem;
-    margin-bottom: 20px;
+    margin: 10px 0;
 }
 
-/* Video Section */
-.video-section {
-    padding: 20px 0;
-    text-align: center;
-    background-color: #fff;
-}
-
-.video-container {
-    position: relative;
-    padding-top: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    border-radius: 10px;
-    margin: 0 auto;
-}
-
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.video-description {
-    padding: 20px;
-}
-
-.video-description h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.video-description p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 25px;
+header .cta-button {
+    background-color: var(--primary-color);
     color: white;
-    background-color: #0077b6;
+    padding: 10px 20px;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #005f8a;
+header .cta-button:hover {
+    background-color: #A51222;
 }
 
-/* Product Grid Sectio
-/* Container for product cards */
-.product-card-container {
+main {
+    padding: 20px;
+}
+
+.video-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.video-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.video-section .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.video-section .cta-button:hover {
+    background-color: #A51222;
+}
+
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Individual product card styling */
 .product-card {
     background-color: var(--card-background);
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px;
-    width: calc(25% - 20px); /* Adjust for spacing */
+    width: calc(25% - 20px);
     box-sizing: border-box;
+    max-width: 300px;
 }
 
-/* Hover effect for the product card */
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Product image container */
 .product-card__image {
-    height: 250px;
+    height: 200px;
     overflow: hidden;
 }
 
-/* Image styling */
 .product-card__image img {
     width: 100%;
     height: 100%;
@@ -150,158 +151,189 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for the image */
 .product-card:hover .product-card__image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-/* Information section of the card */
 .product-card__info {
-    padding: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
 }
 
-/* Title of the product */
 .product-card__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--text-color);
+    margin-bottom: 8px;
+    color: var(--heading-color);
 }
 
-/* Description of the product */
 .product-card__description {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    flex-grow: 1;
 }
 
-/* Price row styling */
 .product-card__price-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Product price styling */
 .product-card__price {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
-/* Button styling */
 .product-card__btn {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 16px;
     border-radius: 50px;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.product-card__btn:hover {
+    background-color: #A51222;
+    transform: scale(1.05);
+}
+
+.takealot-approval {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.takealot-approval h2 {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.takealot-approval p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.takealot-approval .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the button */
-.product-card__btn:hover {
-    background-color: #C71729;
+.takealot-approval .cta-button:hover {
+    background-color: #A51222;
 }
 
-/* Responsive styles */
+.proudly-sa {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.proudly-sa img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.proudly-sa h2 {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.proudly-sa p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.final-cta {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.final-cta .cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.final-cta .cta-button:hover {
+    background-color: #A51222;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 @media (max-width: 768px) {
     .product-card {
-        width: calc(50% - 20px); /* Adjust for spacing */
+        width: calc(50% - 20px);
+    }
+
+    .video-section, .takealot-approval, .proudly-sa, .final-cta {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .product-card {
-        width: calc(100% - 20px); /* Adjust for spacing */
+        width: calc(100% - 20px);
     }
 
-    .product-card__image {
-        height: 200px;
+    header .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    header .hero-section p {
+        font-size: 1rem;
+    }
+
+    .video-section h2, .takealot-approval h2, .proudly-sa h2, .final-cta h2 {
+        font-size: 1.5rem;
     }
 
     .product-card__title {
-        font-size: 1.3rem;
+        font-size: 1.125rem;
     }
 
     .product-card__description {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .product-card__price {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .product-card__btn {
-        padding: 8px 16px;
-        font-size: 0.8rem;
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 }
-
-.takealot-approval h2 {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-}
-
-.takealot-approval p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Proudly South African Section */
-.proudly-sa {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #e8f5e9;
-}
-
-.proudly-sa img {
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-.proudly-sa h2 {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-}
-
-.proudly-sa p {
-    font-size: 1.2rem;
-}
-
-/* Final CTA Section */
-.final-cta {
-    text-align: center;
-    padding: 30px;
-    background-color: #ffffff;
-}
-
-.final-cta h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.final-cta .cta-button {
-    font-size: 1.125rem;
-}
-
-/* Footer Section */
-.footer {
-    background-color: #388e3c;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer p {
-    font-size: 0.9rem;
-} 
